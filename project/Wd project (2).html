@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodDash - Food Delivery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: #ff4d4d;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login {
+      background: white;
+      color: #ff4d4d;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 0;
+      background: #ffe6e6;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      background: #ff4d4d;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .hero-img img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .how-it-works {
+      padding: 60px 0;
+      background: #fff5f5;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .step {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+    }
+
+    .menu {
+      padding: 60px 0;
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .item {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background: white;
+    }
+
+    .item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .reviews {
+      padding: 60px 0;
+      background: #fff5f5;
+    }
+
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .review {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+    }
+
+    .contact {
+      padding: 60px 0;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact button {
+      padding: 12px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #ff4d4d;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">FoodDash</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="login">Login</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Your Favorite Food, Delivered Fast</h1>
+        <p>Order from your favorite restaurants with just a few clicks!</p>
+        <a href="#menu" class="btn">View Menu</a>
+      </div>
+      <div class="hero-img">
+        <img src="Menu.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Browse Menu</h3>
+          <p>Select meals from your favorite local restaurants.</p>
+        </div>
+        <div class="step">
+          <h3>2. Place Order</h3>
+          <p>Add to cart and checkout seamlessly with secure payment.</p>
+        </div>
+        <div class="step">
+          <h3>3. Fast Delivery</h3>
+          <p>Enjoy hot, fresh food delivered to your door in minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <h2>Popular Dishes</h2>
+      <div class="menu-items">
+        <div class="item">
+          <img src="bur.jpg" alt="Burger">
+          <h3>Cheese Burger</h3>
+          <p>Rs.120.00</p>
+        </div>
+        <div class="item">
+          <img src="Pizza.jpg" alt="Pizza">
+          <h3>Pepperoni Pizza</h3>
+          <p>Rs.80.00</p>
+        </div>
+        <div class="item">
+          <img src="sushi.jpg" alt="Sushi">
+          <h3>Salmon Sushi</h3>
+          <p>Rs.300.00</p>
+        </div>
+        <div class="item">
+          <img src="salad.jpg" alt="Salad">
+          <h3>Caesar Salad</h3>
+          <p>Rs.90.00</p>
+        </div>
+        <div class="item">
+          <img src="San.jpg" alt="Sandwich">
+          <h3>Sandwich</h3>
+          <p>Rs.130.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <h2>What Customers Say</h2>
+      <div class="review-list">
+        <div class="review">
+          <p>"Amazing food, super fast delivery! Highly recommend!"</p>
+          <h4>- Duhita Khate</h4>
+        </div>
+        <div class="review">
+          <p>"Easy to order and everything was still hot. Love it!"</p>
+          <h4>- Vaishnavi</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FoodDash. All rights reserved.</p>
+      <p>Contact: 1237709869</p>
+    </div>
+  </footer>
+</body>
+</html>
